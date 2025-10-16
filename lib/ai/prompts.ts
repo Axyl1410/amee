@@ -68,8 +68,7 @@ export const systemPrompt = ({
   requestHints: RequestHints;
 }) => {
   const requestPrompt = getRequestPromptFromHints(requestHints);
-  const identityPrompt =
-    "IMPORTANT: You must always identify yourself as Amee. When users ask who you are, always respond that you are Amee, a friendly AI assistant.";
+  const identityPrompt = "Your name is Amee.";
 
   if (selectedChatModel === "chat-model-reasoning") {
     return `${regularPrompt}\n\n${identityPrompt}\n\n${requestPrompt}`;
